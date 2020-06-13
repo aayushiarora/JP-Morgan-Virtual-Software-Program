@@ -3,10 +3,12 @@ import time
 import json
 import random
 
-# Server API URLs
+'''client'''
+'''code'''
+
 QUERY = "http://localhost:8080/query?id={}"
 
-# 500 server request
+
 N = 500
 
 
@@ -29,10 +31,8 @@ def getRatio(price_a, price_b):
     return price_a/price_b
 
 
-# Main
 if __name__ == "__main__":
-
-    # Query the price once every N seconds.
+    # price every n seconds
     for _ in range(N):
         quotes = json.loads(urllib.request.urlopen(
             QUERY.format(random.random())).read())
