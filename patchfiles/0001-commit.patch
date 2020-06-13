@@ -1,0 +1,81 @@
+From f0ba35e77b61c6521cad92652ab55f86862edbc8 Mon Sep 17 00:00:00 2001
+From: Aayushi Arora <ayushiarora681999@gmail.com>
+Date: Sun, 14 Jun 2020 00:42:04 +0530
+Subject: [PATCH] commit
+
+---
+ 0001-patch-file.patch | 62 +++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 62 insertions(+)
+ create mode 100644 0001-patch-file.patch
+
+diff --git a/0001-patch-file.patch b/0001-patch-file.patch
+new file mode 100644
+index 0000000..251adb8
+--- /dev/null
++++ b/0001-patch-file.patch
+@@ -0,0 +1,62 @@
++From c093d11f50698b1e804ee3fd613cc2d80dd7d4e6 Mon Sep 17 00:00:00 2001
++From: Aayushi Arora <ayushiarora681999@gmail.com>
++Date: Sun, 14 Jun 2020 00:33:40 +0530
++Subject: [PATCH] patch file
++
++---
++ task1/0001-added-task1.patch | 43 ++++++++++++++++++++++++++++++++++++
++ 1 file changed, 43 insertions(+)
++ create mode 100644 task1/0001-added-task1.patch
++
++diff --git a/task1/0001-added-task1.patch b/task1/0001-added-task1.patch
++new file mode 100644
++index 0000000..65c9d85
++--- /dev/null
+++++ b/task1/0001-added-task1.patch
++@@ -0,0 +1,43 @@
+++From c272f8e941ff4685130b9f4432b2b752d6c95a22 Mon Sep 17 00:00:00 2001
+++From: Aayushi Arora <ayushiarora681999@gmail.com>
+++Date: Sun, 14 Jun 2020 00:30:19 +0530
+++Subject: [PATCH] added task1
+++
+++---
+++ task1/client3.py | 10 +++++-----
+++ 1 file changed, 5 insertions(+), 5 deletions(-)
+++
+++diff --git a/task1/client3.py b/task1/client3.py
+++index d57389d..56e6ae4 100644
+++--- a/task1/client3.py
++++++ b/task1/client3.py
+++@@ -3,10 +3,12 @@ import time
+++ import json
+++ import random
+++ 
+++-# Server API URLs
++++'''client'''
++++'''code'''
++++
+++ QUERY = "http://localhost:8080/query?id={}"
+++ 
+++-# 500 server request
++++
+++ N = 500
+++ 
+++ 
+++@@ -29,10 +31,8 @@ def getRatio(price_a, price_b):
+++     return price_a/price_b
+++ 
+++ 
+++-# Main
+++ if __name__ == "__main__":
+++-
+++-    # Query the price once every N seconds.
++++    # price every n seconds
+++     for _ in range(N):
+++         quotes = json.loads(urllib.request.urlopen(
+++             QUERY.format(random.random())).read())
+++-- 
+++2.23.0
+++
++-- 
++2.23.0
++
+-- 
+2.23.0
+
